@@ -1,0 +1,73 @@
+{
+  "summary": {
+    "totalTests": 234,
+    "passed": 234,
+    "failed": 0,
+    "warnings": 12,
+    "duration": 8340,
+    "timestamp": "2024-10-20T14:32:00Z"
+  },
+  "suites": [
+    {
+      "name": "Order Service",
+      "passed": 62,
+      "failed": 0,
+      "coverage": 87
+    },
+    {
+      "name": "User Service",
+      "passed": 54,
+      "failed": 0,
+      "coverage": 84
+    },
+    {
+      "name": "Payment Service",
+      "passed": 48,
+      "failed": 0,
+      "coverage": 91
+    },
+    {
+      "name": "Inventory Service",
+      "passed": 42,
+      "failed": 0,
+      "coverage": 79
+    },
+    {
+      "name": "Integration Tests",
+      "passed": 28,
+      "failed": 0,
+      "coverage": 92
+    }
+  ],
+  "warnings": [
+    {
+      "test": "user.service.spec.ts - should update user profile",
+      "message": "Mock auth service may not cover all edge cases",
+      "severity": "low"
+    },
+    {
+      "test": "order.service.spec.ts - should handle concurrent orders",
+      "message": "Race condition detected in rare scenarios",
+      "severity": "medium"
+    },
+    {
+      "test": "payment.processor.spec.ts - should retry on timeout",
+      "message": "Timeout threshold may be aggressive for slow networks",
+      "severity": "low"
+    }
+  ],
+  "parity": {
+    "legacySystem": {
+      "totalTests": 156,
+      "passed": 132,
+      "coverage": 34
+    },
+    "migratedSystem": {
+      "totalTests": 234,
+      "passed": 234,
+      "coverage": 86
+    },
+    "behavioralMatch": 96.2,
+    "performanceGain": 3.2
+  }
+}

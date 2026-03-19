@@ -1,0 +1,60 @@
+{
+  "mappings": [
+    {
+      "legacyFile": "src/main/java/com/legacy/order/OrderController.java",
+      "migratedFile": "src/order/order.controller.ts",
+      "mappingType": "one-to-one",
+      "changeType": "refactor",
+      "diffSize": "medium"
+    },
+    {
+      "legacyFile": "src/main/java/com/legacy/order/OrderService.java",
+      "migratedFile": "src/order/order.service.ts",
+      "mappingType": "one-to-one",
+      "changeType": "refactor",
+      "diffSize": "large"
+    },
+    {
+      "legacyFile": "src/main/java/com/legacy/user/UserService.java",
+      "migratedFile": "src/user/user.service.ts",
+      "mappingType": "one-to-one",
+      "changeType": "refactor",
+      "diffSize": "large"
+    },
+    {
+      "legacyFile": "src/main/java/com/legacy/payment/PaymentProcessor.java",
+      "migratedFile": "src/payment/payment.processor.ts",
+      "mappingType": "one-to-one",
+      "changeType": "refactor",
+      "diffSize": "medium"
+    },
+    {
+      "legacyFile": "src/main/java/com/legacy/inventory/InventoryManager.java",
+      "migratedFile": "src/inventory/inventory.manager.ts",
+      "mappingType": "one-to-one",
+      "changeType": "refactor",
+      "diffSize": "medium"
+    },
+    {
+      "legacyFile": "src/main/resources/applicationContext.xml",
+      "migratedFile": "src/config/app.config.ts",
+      "mappingType": "one-to-one",
+      "changeType": "replace",
+      "diffSize": "small"
+    },
+    {
+      "legacyFile": "src/test/integration/OrderServiceTest.java",
+      "migratedFile": "src/order/order.service.spec.ts",
+      "mappingType": "one-to-one",
+      "changeType": "rewrite",
+      "diffSize": "medium"
+    }
+  ],
+  "statistics": {
+    "totalLegacyFiles": 7,
+    "totalMigratedFiles": 7,
+    "linesRemoved": 2140,
+    "linesAdded": 1890,
+    "netReduction": "11.7%"
+  }
+}

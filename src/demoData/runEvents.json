@@ -1,0 +1,208 @@
+[
+  {
+    "id": "event-01",
+    "timestamp": 0,
+    "type": "log",
+    "message": "🚀 Legacy Code Migration Pipeline Started",
+    "agent": "orchestrator"
+  },
+  {
+    "id": "event-02",
+    "timestamp": 5000,
+    "type": "agent-start",
+    "message": "Agent 1: Analysis - Scanning codebase for patterns",
+    "agent": "analyzer",
+    "agentIndex": 0
+  },
+  {
+    "id": "event-03",
+    "timestamp": 8000,
+    "type": "log",
+    "message": "Detected 24 legacy API calls in controller layer",
+    "agent": "analyzer"
+  },
+  {
+    "id": "event-04",
+    "timestamp": 12000,
+    "type": "log",
+    "message": "Identified 3 monolithic services to decompose",
+    "agent": "analyzer"
+  },
+  {
+    "id": "event-05",
+    "timestamp": 15000,
+    "type": "agent-complete",
+    "message": "Agent 1: Analysis Complete ✓",
+    "agent": "analyzer",
+    "agentIndex": 0
+  },
+  {
+    "id": "event-06",
+    "timestamp": 18000,
+    "type": "agent-start",
+    "message": "Agent 2: Dependency Resolution - Building module graph",
+    "agent": "depresolver",
+    "agentIndex": 1
+  },
+  {
+    "id": "event-07",
+    "timestamp": 21000,
+    "type": "log",
+    "message": "Resolving circular dependencies between UserService and OrderService",
+    "agent": "depresolver"
+  },
+  {
+    "id": "event-08",
+    "timestamp": 25000,
+    "type": "log",
+    "message": "Created 18 vertices in dependency graph",
+    "agent": "depresolver"
+  },
+  {
+    "id": "event-09",
+    "timestamp": 28000,
+    "type": "agent-complete",
+    "message": "Agent 2: Dependency Resolution Complete ✓",
+    "agent": "depresolver",
+    "agentIndex": 1
+  },
+  {
+    "id": "event-10",
+    "timestamp": 32000,
+    "type": "agent-start",
+    "message": "Agent 3: Transformation Planning - Generating migration strategy",
+    "agent": "planner",
+    "agentIndex": 2
+  },
+  {
+    "id": "event-11",
+    "timestamp": 35000,
+    "type": "log",
+    "message": "Proposed 5-phase migration plan",
+    "agent": "planner"
+  },
+  {
+    "id": "event-12",
+    "timestamp": 39000,
+    "type": "log",
+    "message": "Phase 1: Extract domain models (est. 8 days)",
+    "agent": "planner"
+  },
+  {
+    "id": "event-13",
+    "timestamp": 42000,
+    "type": "agent-complete",
+    "message": "Agent 3: Transformation Planning Complete ✓",
+    "agent": "planner",
+    "agentIndex": 2
+  },
+  {
+    "id": "event-14",
+    "timestamp": 45000,
+    "type": "agent-start",
+    "message": "Agent 4: Code Generation - Translating patterns to modern stack",
+    "agent": "codegen",
+    "agentIndex": 3
+  },
+  {
+    "id": "event-15",
+    "timestamp": 48000,
+    "type": "log",
+    "message": "Generated 142 TypeScript modules from legacy code",
+    "agent": "codegen"
+  },
+  {
+    "id": "event-16",
+    "timestamp": 52000,
+    "type": "log",
+    "message": "Created test stubs for 89 migrated functions",
+    "agent": "codegen"
+  },
+  {
+    "id": "event-17",
+    "timestamp": 55000,
+    "type": "agent-complete",
+    "message": "Agent 4: Code Generation Complete ✓",
+    "agent": "codegen",
+    "agentIndex": 3
+  },
+  {
+    "id": "event-18",
+    "timestamp": 58000,
+    "type": "agent-start",
+    "message": "Agent 5: Validation - Running parity tests",
+    "agent": "validator",
+    "agentIndex": 4
+  },
+  {
+    "id": "event-19",
+    "timestamp": 61000,
+    "type": "log",
+    "message": "Test suite: 234 passed, 12 warnings",
+    "agent": "validator"
+  },
+  {
+    "id": "event-20",
+    "timestamp": 64000,
+    "type": "log",
+    "message": "Behavioral parity: 96.2% match with legacy system",
+    "agent": "validator"
+  },
+  {
+    "id": "event-21",
+    "timestamp": 68000,
+    "type": "agent-complete",
+    "message": "Agent 5: Validation Complete ✓",
+    "agent": "validator",
+    "agentIndex": 4
+  },
+  {
+    "id": "event-22",
+    "timestamp": 70000,
+    "type": "agent-start",
+    "message": "Agent 6: Documentation - Generating migration guide",
+    "agent": "docgen",
+    "agentIndex": 5
+  },
+  {
+    "id": "event-23",
+    "timestamp": 73000,
+    "type": "log",
+    "message": "Created 47-page migration guide with code examples",
+    "agent": "docgen"
+  },
+  {
+    "id": "event-24",
+    "timestamp": 76000,
+    "type": "log",
+    "message": "Generated architecture diagrams for 6 modules",
+    "agent": "docgen"
+  },
+  {
+    "id": "event-25",
+    "timestamp": 79000,
+    "type": "agent-complete",
+    "message": "Agent 6: Documentation Complete ✓",
+    "agent": "docgen",
+    "agentIndex": 5
+  },
+  {
+    "id": "event-26",
+    "timestamp": 82000,
+    "type": "log",
+    "message": "🎉 All Agents Completed Successfully!",
+    "agent": "orchestrator"
+  },
+  {
+    "id": "event-27",
+    "timestamp": 90000,
+    "type": "complete",
+    "message": "Pipeline Finished",
+    "artifacts": [
+      "migratedCode",
+      "testResults",
+      "documentation",
+      "prSummary"
+    ]
+  }
+]

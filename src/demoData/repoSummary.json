@@ -1,0 +1,57 @@
+{
+  "name": "LegacyOrderSystem",
+  "description": "Monolithic Java/Spring order processing system built in 2010",
+  "language": "Java",
+  "framework": "Spring Framework 3.x",
+  "fileCount": 284,
+  "linesOfCode": 45230,
+  "lastModified": "2024-10-15",
+  "mainModules": [
+    {
+      "name": "OrderController",
+      "path": "src/main/java/com/legacy/order/OrderController.java",
+      "lines": 320
+    },
+    {
+      "name": "OrderService",
+      "path": "src/main/java/com/legacy/order/OrderService.java",
+      "lines": 520
+    },
+    {
+      "name": "UserService",
+      "path": "src/main/java/com/legacy/user/UserService.java",
+      "lines": 480
+    },
+    {
+      "name": "PaymentProcessor",
+      "path": "src/main/java/com/legacy/payment/PaymentProcessor.java",
+      "lines": 340
+    },
+    {
+      "name": "InventoryManager",
+      "path": "src/main/java/com/legacy/inventory/InventoryManager.java",
+      "lines": 410
+    }
+  ],
+  "detectedPatterns": [
+    "Monolithic architecture",
+    "Tight coupling between services",
+    "Direct database access via JDBC",
+    "XML-based configuration",
+    "SOAP-based external APIs",
+    "Manual transaction management"
+  ],
+  "suggestedStack": {
+    "language": "TypeScript",
+    "framework": "Node.js/Express + NestJS",
+    "database": "PostgreSQL with TypeORM",
+    "apiStyle": "REST/GraphQL",
+    "testing": "Jest",
+    "deployment": "Docker/Kubernetes"
+  },
+  "estimatedEffort": {
+    "phases": 5,
+    "totalDays": 45,
+    "teamSize": "3-4 developers"
+  }
+}

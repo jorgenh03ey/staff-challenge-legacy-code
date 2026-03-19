@@ -1,0 +1,101 @@
+{
+  "modules": [
+    {
+      "id": "order-service",
+      "name": "Order Service",
+      "type": "service",
+      "complexity": 8,
+      "lines": 520,
+      "dependencies": ["user-service", "payment-service", "inventory-service"],
+      "layer": "business"
+    },
+    {
+      "id": "user-service",
+      "name": "User Service",
+      "type": "service",
+      "complexity": 6,
+      "lines": 480,
+      "dependencies": ["auth-service"],
+      "layer": "business"
+    },
+    {
+      "id": "payment-service",
+      "name": "Payment Service",
+      "type": "service",
+      "complexity": 7,
+      "lines": 340,
+      "dependencies": ["bank-connector", "audit-service"],
+      "layer": "business"
+    },
+    {
+      "id": "inventory-service",
+      "name": "Inventory Service",
+      "type": "service",
+      "complexity": 5,
+      "lines": 410,
+      "dependencies": ["warehouse-connector"],
+      "layer": "business"
+    },
+    {
+      "id": "auth-service",
+      "name": "Auth Service",
+      "type": "utility",
+      "complexity": 4,
+      "lines": 200,
+      "dependencies": [],
+      "layer": "infrastructure"
+    },
+    {
+      "id": "audit-service",
+      "name": "Audit Service",
+      "type": "utility",
+      "complexity": 3,
+      "lines": 150,
+      "dependencies": [],
+      "layer": "infrastructure"
+    },
+    {
+      "id": "bank-connector",
+      "name": "Bank Connector",
+      "type": "external-api",
+      "complexity": 6,
+      "lines": 280,
+      "dependencies": [],
+      "layer": "external"
+    },
+    {
+      "id": "warehouse-connector",
+      "name": "Warehouse Connector",
+      "type": "external-api",
+      "complexity": 5,
+      "lines": 220,
+      "dependencies": [],
+      "layer": "external"
+    }
+  ],
+  "layers": [
+    {
+      "name": "API Gateway",
+      "modules": ["order-controller"]
+    },
+    {
+      "name": "Business Logic",
+      "modules": ["order-service", "user-service", "payment-service", "inventory-service"]
+    },
+    {
+      "name": "Infrastructure",
+      "modules": ["auth-service", "audit-service"]
+    },
+    {
+      "name": "External Integrations",
+      "modules": ["bank-connector", "warehouse-connector"]
+    }
+  ],
+  "circularDependencies": [
+    {
+      "path": ["order-service", "user-service", "order-service"],
+      "severity": "high",
+      "resolution": "Extract shared domain models"
+    }
+  ]
+}

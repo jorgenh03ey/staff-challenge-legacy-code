@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rule-001",
+    "category": "Architecture",
+    "rule": "All services must be independently deployable",
+    "rationale": "Enable faster release cycles and reduce blast radius",
+    "legacyViolation": "All services tightly coupled to central database",
+    "migratedApproach": "Event-driven microservices with separate schemas",
+    "priority": "Critical",
+    "affectedModules": ["OrderService", "UserService", "PaymentProcessor"]
+  },
+  {
+    "id": "rule-002",
+    "category": "Security",
+    "rule": "All API endpoints must require JWT authentication",
+    "rationale": "Prevent unauthorized access and ensure audit trail",
+    "legacyViolation": "Session-based auth with hardcoded credentials",
+    "migratedApproach": "OAuth 2.0 / OpenID Connect with JWT tokens",
+    "priority": "Critical",
+    "affectedModules": ["OrderController"]
+  },
+  {
+    "id": "rule-003",
+    "category": "Performance",
+    "rule": "API response time must be <200ms for 95th percentile",
+    "rationale": "Meet modern user expectations and SLA requirements",
+    "legacyViolation": "Average API latency 500ms due to N+1 queries",
+    "migratedApproach": "Optimized queries, caching layer (Redis), async processing",
+    "priority": "High",
+    "affectedModules": ["OrderService", "UserService"]
+  },
+  {
+    "id": "rule-004",
+    "category": "Data",
+    "rule": "All PII must be encrypted at rest and in transit",
+    "rationale": "Compliance with GDPR/CCPA and data protection regulations",
+    "legacyViolation": "Plain text storage of user emails and phone numbers",
+    "migratedApproach": "AES-256 encryption with key management service",
+    "priority": "Critical",
+    "affectedModules": ["UserService"]
+  },
+  {
+    "id": "rule-005",
+    "category": "Testing",
+    "rule": "Minimum 80% code coverage for critical paths",
+    "rationale": "Reduce production incidents and ensure quality",
+    "legacyViolation": "<5% test coverage with manual QA only",
+    "migratedApproach": "Comprehensive unit/integration tests with CI/CD gates",
+    "priority": "High",
+    "affectedModules": ["OrderService", "PaymentProcessor"]
+  }
+]
