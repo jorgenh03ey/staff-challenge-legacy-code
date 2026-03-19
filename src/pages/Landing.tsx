@@ -53,7 +53,6 @@ const Landing: React.FC = () => {
           <div className={styles.ctas}>
             <PrimaryButton
               text="Start Migration ✈️"
-              size="large"
               onClick={() => navigate("/import")}
               className={styles.ctaBtn}
             />

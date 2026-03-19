@@ -4,6 +4,7 @@ import {
   PrimaryButton,
   DefaultButton,
   Stack,
+  Text,
 } from "@fluentui/react";
 import repoData from "../demoData/repoSummary.json";
 import styles from "./Pages.module.css";

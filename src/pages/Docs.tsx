@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Stack } from "@fluentui/react";
+import { Stack, Text } from "@fluentui/react";
 import businessRulesData from "../demoData/businessRules.json";
 import type { BusinessRule } from "../types";
 import styles from "./Pages.module.css";

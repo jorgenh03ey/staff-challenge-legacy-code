@@ -21,49 +21,73 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           name: "Landing",
           url: "/",
           icon: "Home",
-          onClick: () => navigate("/"),
+          onClick: (e) => {
+            e.preventDefault();
+            navigate("/");
+          },
         },
         {
           name: "Import Repo",
           url: "/import",
           icon: "Upload",
-          onClick: () => navigate("/import"),
+          onClick: (e) => {
+            e.preventDefault();
+            navigate("/import");
+          },
         },
         {
           name: "Agent Orchestration",
           url: "/run",
           icon: "Running",
-          onClick: () => navigate("/run"),
+          onClick: (e) => {
+            e.preventDefault();
+            navigate("/run");
+          },
         },
         {
           name: "Architecture",
           url: "/architecture",
           icon: "Diagram",
-          onClick: () => navigate("/architecture"),
+          onClick: (e) => {
+            e.preventDefault();
+            navigate("/architecture");
+          },
         },
         {
           name: "Translation",
           url: "/translate",
           icon: "PageEdit",
-          onClick: () => navigate("/translate"),
+          onClick: (e) => {
+            e.preventDefault();
+            navigate("/translate");
+          },
         },
         {
           name: "Living Docs",
           url: "/docs",
           icon: "Documentation",
-          onClick: () => navigate("/docs"),
+          onClick: (e) => {
+            e.preventDefault();
+            navigate("/docs");
+          },
         },
         {
           name: "Validation",
           url: "/validate",
           icon: "CheckMark",
-          onClick: () => navigate("/validate"),
+          onClick: (e) => {
+            e.preventDefault();
+            navigate("/validate");
+          },
         },
         {
           name: "Export",
           url: "/export",
           icon: "Download",
-          onClick: () => navigate("/export"),
+          onClick: (e) => {
+            e.preventDefault();
+            navigate("/export");
+          },
         },
       ],
     },
@@ -94,7 +118,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <nav className={styles.sidebar}>
           <Nav
             groups={navLinkGroups}
-            selectedKey={window.location.pathname}
+            selectedKey={window.location.pathname || "/"}
             styles={{
               root: {
                 width: "100%",

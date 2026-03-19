@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack } from "@fluentui/react";
+import { Stack, Text } from "@fluentui/react";
 import moduleGraphData from "../demoData/moduleGraph.json";
 import styles from "./Pages.module.css";
 
