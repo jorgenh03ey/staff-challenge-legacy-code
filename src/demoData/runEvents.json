@@ -3,14 +3,14 @@
     "id": "event-01",
     "timestamp": 0,
     "type": "log",
-    "message": "🚀 Legacy Code Migration Pipeline Started",
+    "message": "🚀 Messaging Platform Migration Pipeline Started",
     "agent": "orchestrator"
   },
   {
     "id": "event-02",
     "timestamp": 5000,
     "type": "agent-start",
-    "message": "Agent 1: Analysis - Scanning codebase for patterns",
+    "message": "Agent 1: Analysis - Scanning messaging codebase for patterns",
     "agent": "analyzer",
     "agentIndex": 0
   },
@@ -18,14 +18,14 @@
     "id": "event-03",
     "timestamp": 8000,
     "type": "log",
-    "message": "Detected 24 legacy API calls in controller layer",
+    "message": "Detected 128 message polling operations in controller layer",
     "agent": "analyzer"
   },
   {
     "id": "event-04",
     "timestamp": 12000,
     "type": "log",
-    "message": "Identified 3 monolithic services to decompose",
+    "message": "Identified 5 messaging services with synchronous bottlenecks",
     "agent": "analyzer"
   },
   {
@@ -40,7 +40,7 @@
     "id": "event-06",
     "timestamp": 18000,
     "type": "agent-start",
-    "message": "Agent 2: Dependency Resolution - Building module graph",
+    "message": "Agent 2: Dependency Resolution - Building message flow graph",
     "agent": "depresolver",
     "agentIndex": 1
   },
@@ -48,14 +48,14 @@
     "id": "event-07",
     "timestamp": 21000,
     "type": "log",
-    "message": "Resolving circular dependencies between UserService and OrderService",
+    "message": "Resolving dependencies: Thread Service ↔ User Profile Service",
     "agent": "depresolver"
   },
   {
     "id": "event-08",
     "timestamp": 25000,
     "type": "log",
-    "message": "Created 18 vertices in dependency graph",
+    "message": "Created 22 vertices in messaging dependency graph",
     "agent": "depresolver"
   },
   {
@@ -70,7 +70,7 @@
     "id": "event-10",
     "timestamp": 32000,
     "type": "agent-start",
-    "message": "Agent 3: Transformation Planning - Generating migration strategy",
+    "message": "Agent 3: Transformation Planning - Designing async messaging architecture",
     "agent": "planner",
     "agentIndex": 2
   },
@@ -78,14 +78,14 @@
     "id": "event-11",
     "timestamp": 35000,
     "type": "log",
-    "message": "Proposed 5-phase migration plan",
+    "message": "Proposed 5-phase WebSocket-first migration plan",
     "agent": "planner"
   },
   {
     "id": "event-12",
     "timestamp": 39000,
     "type": "log",
-    "message": "Phase 1: Extract domain models (est. 8 days)",
+    "message": "Phase 1: Extract message models with E2E encryption (est. 10 days)",
     "agent": "planner"
   },
   {
@@ -100,7 +100,7 @@
     "id": "event-14",
     "timestamp": 45000,
     "type": "agent-start",
-    "message": "Agent 4: Code Generation - Translating patterns to modern stack",
+    "message": "Agent 4: Code Generation - Building Python FastAPI services",
     "agent": "codegen",
     "agentIndex": 3
   },
@@ -108,14 +108,14 @@
     "id": "event-15",
     "timestamp": 48000,
     "type": "log",
-    "message": "Generated 142 TypeScript modules from legacy code",
+    "message": "Generated 156 Python async service modules",
     "agent": "codegen"
   },
   {
     "id": "event-16",
     "timestamp": 52000,
     "type": "log",
-    "message": "Created test stubs for 89 migrated functions",
+    "message": "Created WebSocket handlers for 94 realtime endpoints",
     "agent": "codegen"
   },
   {
@@ -130,7 +130,7 @@
     "id": "event-18",
     "timestamp": 58000,
     "type": "agent-start",
-    "message": "Agent 5: Validation - Running parity tests",
+    "message": "Agent 5: Validation - Running messaging protocol tests",
     "agent": "validator",
     "agentIndex": 4
   },
@@ -138,15 +138,15 @@
     "id": "event-19",
     "timestamp": 61000,
     "type": "log",
-    "message": "Test suite: 234 passed, 12 warnings",
+    "message": "Test results: 234 passed (message delivery, encryption, concurrency)",
     "agent": "validator"
   },
   {
     "id": "event-20",
     "timestamp": 64000,
     "type": "log",
-    "message": "Behavioral parity: 96.2% match with legacy system",
-    "agent": "validator"
+    "message": "Messaging compatibility: 96.2% parity with legacy platform",
+    "agent": "validator"  
   },
   {
     "id": "event-21",
@@ -160,7 +160,7 @@
     "id": "event-22",
     "timestamp": 70000,
     "type": "agent-start",
-    "message": "Agent 6: Documentation - Generating migration guide",
+    "message": "Agent 6: Documentation - Generating messaging migration guide",
     "agent": "docgen",
     "agentIndex": 5
   },
@@ -168,14 +168,14 @@
     "id": "event-23",
     "timestamp": 73000,
     "type": "log",
-    "message": "Created 47-page migration guide with code examples",
+    "message": "Created 52-page messaging architecture guide with examples",
     "agent": "docgen"
   },
   {
     "id": "event-24",
     "timestamp": 76000,
     "type": "log",
-    "message": "Generated architecture diagrams for 6 modules",
+    "message": "Generated WebSocket integration guide and runbooks",
     "agent": "docgen"
   },
   {
@@ -190,7 +190,7 @@
     "id": "event-26",
     "timestamp": 82000,
     "type": "log",
-    "message": "🎉 All Agents Completed Successfully!",
+    "message": "🎉 Messaging Migration Pipeline Completed Successfully!",
     "agent": "orchestrator"
   },
   {

@@ -96,7 +96,7 @@ const Run: React.FC = () => {
     <div className={styles.page}>
       <h1 className={styles.pageTitle}>⚙️ Agent Orchestration</h1>
       <p className={styles.pageSubtitle}>
-        Watch 6 specialized AI agents work together to migrate your codebase
+        Watch 6 AI agents collaborate to modernize your messaging platform
       </p>
 
       <Stack styles={{ root: { gap: 24 } }}>

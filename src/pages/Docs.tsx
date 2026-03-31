@@ -21,7 +21,7 @@ const Docs: React.FC = () => {
     <div className={styles.page}>
       <h1 className={styles.pageTitle}>📚 Living Documentation</h1>
       <p className={styles.pageSubtitle}>
-        Business rules, workflow summaries, and links to legacy code
+        Messaging architecture requirements, rules, and migration workflow
       </p>
 
       <Stack styles={{ root: { gap: 24, maxWidth: "1200px" } }}>

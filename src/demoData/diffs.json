@@ -2,21 +2,21 @@
   "diffs": [
     {
       "id": "diff-001",
-      "from": "OrderController.java",
-      "to": "order.controller.ts",
-      "legacyCode": "@RequestMapping(\"/api/orders\")\n@RestController\npublic class OrderController {\n  @Autowired\n  private OrderService orderService;\n  \n  @GetMapping(\"/{id}\")\n  public Order getOrder(@PathVariable long id) {\n    return orderService.findById(id);\n  }\n}",
-      "migratedCode": "import { Controller, Get, Param } from '@nestjs/common';\nimport { OrderService } from './order.service';\n\n@Controller('orders')\nexport class OrderController {\n  constructor(private readonly orderService: OrderService) {}\n  \n  @Get(':id')\n  async getOrder(@Param('id') id: string) {\n    return this.orderService.findById(parseInt(id, 10));\n  }\n}",
-      "explanation": "Migrated Spring REST controller to NestJS decorator-based controller format. Key changes: Replaced @Autowired with constructor injection, modernized decorators, and added async/await pattern.",
-      "impact": "Higher testability, better dependency injection pattern, native TypeScript support"
+      "from": "ThreadController.java",
+      "to": "thread.controller.py",
+      "legacyCode": "@RequestMapping(\"/api/threads\")\n@RestController\npublic class ThreadController {\n  @Autowired\n  private MessagingService messagingService;\n  \n  @GetMapping(\"/{id}\")\n  public Thread getThread(@PathVariable long id) {\n    return messagingService.findThread(id);\n  }\n}",
+      "migratedCode": "from fastapi import APIRouter, WebSocket\nfrom threading_service import MessagingService\n\nrouter = APIRouter(prefix=\"/threads\", tags=[\"threads\"])\nservice = MessagingService()\n\n@router.get(\"/{thread_id}\")\nasync def get_thread(thread_id: int):\n    return await service.find_thread(thread_id)",
+      "explanation": "Migrated from Spring MVC REST controller to FastAPI async endpoints. Key changes: Replaced @Autowired with dependency injection, async/await for non-blocking operations, and WebSocket support for real-time updates.",
+      "impact": "Better performance through async I/O, native WebSocket support for live messaging, cleaner Python async/await syntax"
     },
     {
       "id": "diff-002",
-      "from": "OrderService.java",
-      "to": "order.service.ts",
-      "legacyCode": "public Order createOrder(OrderRequest req) {\n  Order order = new Order();\n  order.setUserId(req.getUserId());\n  order.setItems(req.getItems());\n  // Direct DB access\n  jdbcTemplate.update(INSERT_QUERY, order);\n  return order;\n}",
-      "migratedCode": "async createOrder(req: CreateOrderDto): Promise<Order> {\n  const order = new Order();\n  order.userId = req.userId;\n  order.items = req.items;\n  // Using ORM with type safety\n  return this.orderRepository.save(order);\n}",
-      "explanation": "Replaced JDBC direct queries with TypeORM repository pattern. Async/await ensures non-blocking I/O, and DTOs provide validation.",
-      "impact": "Type-safe database operations, better query optimization, async I/O for better performance"
+      "from": "MessagingService.java",
+      "to": "messaging.service.py",
+      "legacyCode": "public Thread createMessage(MessageRequest req) {\n  Message msg = new Message();\n  msg.setThreadId(req.getThreadId());\n  msg.setContent(req.getContent());\n  // Direct DB access  \n  jdbcTemplate.update(INSERT_QUERY, msg);\n  return msg;\n}",
+      "migratedCode": "async def create_message(req: MessageCreateDto) -> Message:\n    msg = Message(\n        thread_id=req.thread_id,\n        content=encrypt_e2e(req.content),  # End-to-end encryption\n        sender_id=req.sender_id\n    )\n    return await message_repo.save(msg)",
+      "explanation": "Replaced JDBC direct queries with SQLAlchemy ORM. Added end-to-end encryption for message content. Async/await ensures non-blocking I/O for high-volume message throughput.",
+      "impact": "Type-safe database operations, automatic encryption at persistent layer, better scalability with async processing"
     }
   ]
 }

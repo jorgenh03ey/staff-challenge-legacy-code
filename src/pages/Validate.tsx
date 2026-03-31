@@ -10,8 +10,11 @@ const Validate: React.FC = () => {
     <div className={styles.page}>
       <h1 className={styles.pageTitle}>✅ Validation Dashboard</h1>
       <p className={styles.pageSubtitle}>
-        Test results, parity metrics, and quality assurance
+        Message delivery tests, compatibility metrics, quality assurance, and agentic AI readiness
       </p>
+      <div style={{ fontSize: "12px", color: "#666", marginTop: "8px", marginBottom: "16px" }}>
+        <strong>Agentic AI Readiness:</strong> A mocked composite score representing API exposure, event-driven signals, observability, and governance hooks that autonomous agents rely on.
+      </div>
 
       <Stack styles={{ root: { gap: 24 } }}>
         {/* Summary Metrics */}
@@ -40,6 +43,12 @@ const Validate: React.FC = () => {
               label: "Behavioral Parity",
               value: `${testResultsData.parity.behavioralMatch}%`,
               unit: "match",
+            },
+            {
+              icon: "🔗",
+              label: "Agentic AI Readiness",
+              value: `${testResultsData.parity.migratedSystem.agenticAIReadiness}%`,
+              unit: "ready",
             },
           ].map((metric, idx) => (
             <div key={idx} className={styles.metricCard}>
@@ -163,12 +172,14 @@ const Validate: React.FC = () => {
                 tests: testResultsData.parity.legacySystem.totalTests,
                 passed: testResultsData.parity.legacySystem.passed,
                 coverage: testResultsData.parity.legacySystem.coverage,
+                agenticAIReadiness: testResultsData.parity.legacySystem.agenticAIReadiness,
               },
               {
                 label: "Migrated System",
                 tests: testResultsData.parity.migratedSystem.totalTests,
                 passed: testResultsData.parity.migratedSystem.passed,
                 coverage: testResultsData.parity.migratedSystem.coverage,
+                agenticAIReadiness: testResultsData.parity.migratedSystem.agenticAIReadiness,
               },
             ].map((system, idx) => (
               <div
@@ -197,7 +208,7 @@ const Validate: React.FC = () => {
                     {system.passed}
                   </span>
                 </div>
-                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "8px" }}>
                   <span style={{ fontSize: "12px", color: "#666" }}>Coverage</span>
                   <span
                     style={{
@@ -206,6 +217,17 @@ const Validate: React.FC = () => {
                     }}
                   >
                     {system.coverage}%
+                  </span>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span style={{ fontSize: "12px", color: "#666" }}>Agentic AI Readiness</span>
+                  <span
+                    style={{
+                      fontWeight: 600,
+                      color: system.agenticAIReadiness > 50 ? "#107c10" : "#dd5900",
+                    }}
+                  >
+                    {system.agenticAIReadiness}%
                   </span>
                 </div>
               </div>

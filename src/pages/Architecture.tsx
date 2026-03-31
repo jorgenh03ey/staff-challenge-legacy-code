@@ -8,7 +8,7 @@ const Architecture: React.FC = () => {
     <div className={styles.page}>
       <h1 className={styles.pageTitle}>🏗️ Architecture</h1>
       <p className={styles.pageSubtitle}>
-        Visualize module dependencies and service layers
+        Messaging service dependencies and infrastructure layers
       </p>
 
       <Stack styles={{ root: { gap: 24 } }}>

@@ -24,29 +24,29 @@ const Landing: React.FC = () => {
 
           <p className={styles.landingSubtitle}>
             Watch AI agents work together to orchestrate a complete migration
-            from legacy monolithic architecture to a modern distributed system.
+            from a legacy monolithic messaging app to a modern Python microservices architecture.
           </p>
 
           <div className={styles.featureGrid}>
             <div className={styles.featureCard}>
               <span className={styles.featureIcon}>🔍</span>
-              <h3>Intelligent Analysis</h3>
-              <p>Automated detection of patterns and anti-patterns</p>
+              <h3>Code Analysis</h3>
+              <p>Detect messaging patterns and anti-patterns automatically</p>
             </div>
             <div className={styles.featureCard}>
               <span className={styles.featureIcon}>🔄</span>
-              <h3>Strategic Transformation</h3>
-              <p>Phased migration planning with rollback support</p>
+              <h3>Architecture Redesign</h3>
+              <p>Transform to async WebSocket-based design with E2E encryption</p>
             </div>
             <div className={styles.featureCard}>
               <span className={styles.featureIcon}>✅</span>
-              <h3>Quality Validation</h3>
-              <p>96%+ behavioral parity with legacy system</p>
+              <h3>Quality Assurance</h3>
+              <p>96%+ message delivery parity with original platform</p>
             </div>
             <div className={styles.featureCard}>
               <span className={styles.featureIcon}>📚</span>
-              <h3>Auto-Generated Docs</h3>
-              <p>Architecture guides and migration playbooks</p>
+              <h3>Auto Documentation</h3>
+              <p>Migration guides and WebSocket integration runbooks</p>
             </div>
           </div>
 
@@ -64,17 +64,17 @@ const Landing: React.FC = () => {
           <div className={styles.flowSteps}>
             <div className={styles.flowStep}>
               <span className={styles.stepNum}>1</span>
-              <span className={styles.stepText}>Upload your legacy repo</span>
+              <span className={styles.stepText}>Upload messaging codebase</span>
             </div>
             <span className={styles.stepArrow}>→</span>
             <div className={styles.flowStep}>
               <span className={styles.stepNum}>2</span>
-              <span className={styles.stepText}>Run agent pipeline</span>
+              <span className={styles.stepText}>Run AI agent pipeline</span>
             </div>
             <span className={styles.stepArrow}>→</span>
             <div className={styles.flowStep}>
               <span className={styles.stepNum}>3</span>
-              <span className={styles.stepText}>Export migrated code</span>
+              <span className={styles.stepText}>Export Python services</span>
             </div>
           </div>
         </Stack>

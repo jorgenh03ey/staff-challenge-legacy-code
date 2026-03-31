@@ -1,17 +1,17 @@
 {
   "modules": [
     {
-      "id": "order-service",
-      "name": "Order Service",
+      "id": "thread-service",
+      "name": "Thread Service",
       "type": "service",
       "complexity": 8,
       "lines": 520,
-      "dependencies": ["user-service", "payment-service", "inventory-service"],
+      "dependencies": ["user-profile-service", "notification-service", "archive-service"],
       "layer": "business"
     },
     {
-      "id": "user-service",
-      "name": "User Service",
+      "id": "user-profile-service",
+      "name": "User Profile Service",
       "type": "service",
       "complexity": 6,
       "lines": 480,
@@ -19,21 +19,21 @@
       "layer": "business"
     },
     {
-      "id": "payment-service",
-      "name": "Payment Service",
+      "id": "notification-service",
+      "name": "Notification Service",
       "type": "service",
       "complexity": 7,
       "lines": 340,
-      "dependencies": ["bank-connector", "audit-service"],
+      "dependencies": ["push-connector", "audit-service"],
       "layer": "business"
     },
     {
-      "id": "inventory-service",
-      "name": "Inventory Service",
+      "id": "archive-service",
+      "name": "Archive Service",
       "type": "service",
       "complexity": 5,
       "lines": 410,
-      "dependencies": ["warehouse-connector"],
+      "dependencies": ["storage-connector"],
       "layer": "business"
     },
     {
@@ -55,8 +55,8 @@
       "layer": "infrastructure"
     },
     {
-      "id": "bank-connector",
-      "name": "Bank Connector",
+      "id": "push-connector",
+      "name": "Push Notification Connector",
       "type": "external-api",
       "complexity": 6,
       "lines": 280,
@@ -64,8 +64,8 @@
       "layer": "external"
     },
     {
-      "id": "warehouse-connector",
-      "name": "Warehouse Connector",
+      "id": "storage-connector",
+      "name": "Cloud Storage Connector",
       "type": "external-api",
       "complexity": 5,
       "lines": 220,
@@ -75,12 +75,12 @@
   ],
   "layers": [
     {
-      "name": "API Gateway",
-      "modules": ["order-controller"]
+      "name": "Message Gateway",
+      "modules": ["thread-controller"]
     },
     {
-      "name": "Business Logic",
-      "modules": ["order-service", "user-service", "payment-service", "inventory-service"]
+      "name": "Messaging Core",
+      "modules": ["thread-service", "user-profile-service", "notification-service", "archive-service"]
     },
     {
       "name": "Infrastructure",
@@ -88,14 +88,14 @@
     },
     {
       "name": "External Integrations",
-      "modules": ["bank-connector", "warehouse-connector"]
+      "modules": ["push-connector", "storage-connector"]
     }
   ],
   "circularDependencies": [
     {
-      "path": ["order-service", "user-service", "order-service"],
+      "path": ["thread-service", "user-profile-service", "thread-service"],
       "severity": "high",
-      "resolution": "Extract shared domain models"
+      "resolution": "Extract shared messaging models into separate domain module"
     }
   ]
 }

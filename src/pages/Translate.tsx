@@ -13,7 +13,7 @@ const Translate: React.FC = () => {
     <div className={styles.page}>
       <h1 className={styles.pageTitle}>🔄 Translation Workspace</h1>
       <p className={styles.pageSubtitle}>
-        Side-by-side code comparison showing legacy vs. migrated transformations
+        Side-by-side code comparison showing Java → Python transformations
       </p>
 
       <Stack styles={{ root: { gap: 20 } }}>

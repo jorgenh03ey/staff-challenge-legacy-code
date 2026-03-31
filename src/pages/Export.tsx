@@ -151,7 +151,7 @@ const Export: React.FC = () => {
     <div className={styles.page}>
       <h1 className={styles.pageTitle}>📦 Export Results</h1>
       <p className={styles.pageSubtitle}>
-        Download your migrated code, docs, and test reports
+        Download your Python microservices, documentation, and deployment artifacts
       </p>
 
       <Stack styles={{ root: { gap: 24, maxWidth: "1000px" } }}>

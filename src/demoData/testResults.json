@@ -9,25 +9,25 @@
   },
   "suites": [
     {
-      "name": "Order Service",
+      "name": "Thread Service",
       "passed": 62,
       "failed": 0,
       "coverage": 87
     },
     {
-      "name": "User Service",
+      "name": "User Profile Service",
       "passed": 54,
       "failed": 0,
       "coverage": 84
     },
     {
-      "name": "Payment Service",
+      "name": "Notification Service",
       "passed": 48,
       "failed": 0,
       "coverage": 91
     },
     {
-      "name": "Inventory Service",
+      "name": "Archive Service",
       "passed": 42,
       "failed": 0,
       "coverage": 79
@@ -41,17 +41,17 @@
   ],
   "warnings": [
     {
-      "test": "user.service.spec.ts - should update user profile",
-      "message": "Mock auth service may not cover all edge cases",
+      "test": "user.service.spec.ts - should sync presence updates",
+      "message": "Mock presence service may not cover all edge cases",
       "severity": "low"
     },
     {
-      "test": "order.service.spec.ts - should handle concurrent orders",
-      "message": "Race condition detected in rare scenarios",
+      "test": "thread.service.spec.ts - should handle concurrent messages",
+      "message": "Race condition detected in rare delivery scenarios",
       "severity": "medium"
     },
     {
-      "test": "payment.processor.spec.ts - should retry on timeout",
+      "test": "notification.service.spec.ts - should retry on timeout",
       "message": "Timeout threshold may be aggressive for slow networks",
       "severity": "low"
     }
@@ -60,12 +60,14 @@
     "legacySystem": {
       "totalTests": 156,
       "passed": 132,
-      "coverage": 34
+      "coverage": 34,
+      "agenticAIReadiness": 8
     },
     "migratedSystem": {
       "totalTests": 234,
       "passed": 234,
-      "coverage": 86
+      "coverage": 86,
+      "agenticAIReadiness": 88
     },
     "behavioralMatch": 96.2,
     "performanceGain": 3.2

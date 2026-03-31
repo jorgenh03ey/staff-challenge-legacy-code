@@ -1,6 +1,6 @@
 {
-  "name": "LegacyOrderSystem",
-  "description": "Monolithic Java/Spring order processing system built in 2010",
+  "name": "LegacyMessagingApp",
+  "description": "Monolithic Java/Spring messaging application built in 2008",
   "language": "Java",
   "framework": "Spring Framework 3.x",
   "fileCount": 284,
@@ -8,45 +8,45 @@
   "lastModified": "2024-10-15",
   "mainModules": [
     {
-      "name": "OrderController",
-      "path": "src/main/java/com/legacy/order/OrderController.java",
+      "name": "ThreadController",
+      "path": "src/main/java/com/legacy/messaging/ThreadController.java",
       "lines": 320
     },
     {
-      "name": "OrderService",
-      "path": "src/main/java/com/legacy/order/OrderService.java",
+      "name": "MessagingService",
+      "path": "src/main/java/com/legacy/messaging/MessagingService.java",
       "lines": 520
     },
     {
-      "name": "UserService",
-      "path": "src/main/java/com/legacy/user/UserService.java",
+      "name": "UserProfileService",
+      "path": "src/main/java/com/legacy/user/UserProfileService.java",
       "lines": 480
     },
     {
-      "name": "PaymentProcessor",
-      "path": "src/main/java/com/legacy/payment/PaymentProcessor.java",
+      "name": "NotificationService",
+      "path": "src/main/java/com/legacy/notification/NotificationService.java",
       "lines": 340
     },
     {
-      "name": "InventoryManager",
-      "path": "src/main/java/com/legacy/inventory/InventoryManager.java",
+      "name": "ConversationArchiveService",
+      "path": "src/main/java/com/legacy/archive/ConversationArchiveService.java",
       "lines": 410
     }
   ],
   "detectedPatterns": [
-    "Monolithic architecture",
-    "Tight coupling between services",
-    "Direct database access via JDBC",
-    "XML-based configuration",
-    "SOAP-based external APIs",
-    "Manual transaction management"
+    "Monolithic messaging kernel",
+    "Synchronous message processing",
+    "Single database for all platform data",
+    "Polling-based notification system",
+    "Legacy thread-per-request model",
+    "Manual connection pooling"
   ],
   "suggestedStack": {
-    "language": "TypeScript",
-    "framework": "Node.js/Express + NestJS",
-    "database": "PostgreSQL with TypeORM",
-    "apiStyle": "REST/GraphQL",
-    "testing": "Jest",
+    "language": "Python",
+    "framework": "FastAPI with async/await",
+    "database": "PostgreSQL with SQLAlchemy ORM",
+    "apiStyle": "REST + WebSocket (real-time)",
+    "testing": "Pytest",
     "deployment": "Docker/Kubernetes"
   },
   "estimatedEffort": {

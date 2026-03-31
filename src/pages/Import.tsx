@@ -45,9 +45,9 @@ const Import: React.FC = () => {
 
   return (
     <div className={styles.page}>
-      <h1 className={styles.pageTitle}>📁 Import Your Repository</h1>
+      <h1 className={styles.pageTitle}>📁 Import Your Codebase</h1>
       <p className={styles.pageSubtitle}>
-        Upload a legacy codebase for analysis and migration planning
+        Upload a legacy messaging platform for analysis and migration planning
       </p>
 
       {repoSummary && (
@@ -55,12 +55,12 @@ const Import: React.FC = () => {
           <Stack>
             {/* Already showing repo data as if uploaded */}
             <div className={styles.uploadZone}>
-              <div className={styles.uploadIcon}>📦</div>
+              <div className={styles.uploadIcon}>�</div>
               <Text variant="large" block>
-                Repository Already Loaded
+                Messaging Platform Loaded
               </Text>
               <Text variant="small" block styles={{ marginTop: 8 }}>
-                Demo repository is ready for analysis
+                Demo platform (LegacyMessagingApp) ready for analysis
               </Text>
             </div>
 
@@ -105,7 +105,7 @@ const Import: React.FC = () => {
             {/* Module Selection */}
             <Stack styles={{ root: { marginTop: 24 } }}>
               <Text variant="large" block styles={{ fontWeight: 600 }}>
-                Select Modules to Migrate
+                Select Messaging Services to Modernize
               </Text>
               <div style={{ marginTop: 12 }}>
                 {repoSummary.mainModules.map((module) => (

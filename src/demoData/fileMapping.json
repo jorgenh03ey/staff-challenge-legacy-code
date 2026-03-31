@@ -1,50 +1,50 @@
 {
   "mappings": [
     {
-      "legacyFile": "src/main/java/com/legacy/order/OrderController.java",
-      "migratedFile": "src/order/order.controller.ts",
+      "legacyFile": "src/main/java/com/legacy/messaging/ThreadController.java",
+      "migratedFile": "src/thread/thread.controller.py",
       "mappingType": "one-to-one",
       "changeType": "refactor",
       "diffSize": "medium"
     },
     {
-      "legacyFile": "src/main/java/com/legacy/order/OrderService.java",
-      "migratedFile": "src/order/order.service.ts",
+      "legacyFile": "src/main/java/com/legacy/messaging/MessagingService.java",
+      "migratedFile": "src/messaging/messaging.service.py",
       "mappingType": "one-to-one",
       "changeType": "refactor",
       "diffSize": "large"
     },
     {
-      "legacyFile": "src/main/java/com/legacy/user/UserService.java",
-      "migratedFile": "src/user/user.service.ts",
+      "legacyFile": "src/main/java/com/legacy/user/UserProfileService.java",
+      "migratedFile": "src/user/user.service.py",
       "mappingType": "one-to-one",
       "changeType": "refactor",
       "diffSize": "large"
     },
     {
-      "legacyFile": "src/main/java/com/legacy/payment/PaymentProcessor.java",
-      "migratedFile": "src/payment/payment.processor.ts",
+      "legacyFile": "src/main/java/com/legacy/notification/NotificationService.java",
+      "migratedFile": "src/notification/notification.service.py",
       "mappingType": "one-to-one",
       "changeType": "refactor",
       "diffSize": "medium"
     },
     {
-      "legacyFile": "src/main/java/com/legacy/inventory/InventoryManager.java",
-      "migratedFile": "src/inventory/inventory.manager.ts",
+      "legacyFile": "src/main/java/com/legacy/archive/ConversationArchiveService.java",
+      "migratedFile": "src/archive/archive.service.py",
       "mappingType": "one-to-one",
       "changeType": "refactor",
       "diffSize": "medium"
     },
     {
       "legacyFile": "src/main/resources/applicationContext.xml",
-      "migratedFile": "src/config/app.config.ts",
+      "migratedFile": "config/app.config.py",
       "mappingType": "one-to-one",
       "changeType": "replace",
       "diffSize": "small"
     },
     {
-      "legacyFile": "src/test/integration/OrderServiceTest.java",
-      "migratedFile": "src/order/order.service.spec.ts",
+      "legacyFile": "src/test/integration/MessagingServiceTest.java",
+      "migratedFile": "src/messaging/messaging.service.test.py",
       "mappingType": "one-to-one",
       "changeType": "rewrite",
       "diffSize": "medium"
